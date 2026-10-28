@@ -218,3 +218,11 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Project-specific
+.idea/
+logs/
+*.zip
+reports/*
+!reports/.gitkeep
+!lib/

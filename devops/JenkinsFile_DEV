@@ -1,0 +1,15 @@
+node {
+    stage ("Load Configurations"){
+        dir('devops/') {
+            git branch: 'compliance-tms', credentialsId: 'prod-bitbucket-ap', url: 'https://bitbucket.org/simpaisa1/deployment_config.git'
+        }
+    }
+    
+    stage('Preparing Files') {
+        load 'devops/dev/ssm-JenkinsFile'
+    }
+    
+    stage('End') {
+        echo "Finished !!"
+    }
+}
